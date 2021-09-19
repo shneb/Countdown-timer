@@ -113,6 +113,7 @@ function dateCheck() {
 	}
 }
 
+// save info into the local storage
 function saveSession(){
 	localStorage.setItem("eventName", eventName.value);
 	localStorage.setItem("eventDate", dateInput);
