@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/emojionearea.css">
+    <link rel="stylesheet" href="css/emojionearea.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>CountDown Timer</title>
+</head>
+<body>
+
+<header>
+
+</header>
+<main>
+    <header>
+    <section class="goodDayContainer">
+        <h3 id="goodDay"><span>Good</span></h3>
+    </section>
+    <p class="place">Atacama Desert, Chile</p>
+    </header>
+    <section id="eventForm">
+       <section id="eventFormContainer">
+                <label for="eventName">Event name:</label>
+                <input type="text" class="eventName" id="eventName"placeholder="My Birth Day">
+                <p id="eventNameError">Please enter event name!</p>
+
+                <label for="eventDate">Event Date:</label>           
+            <section class="dateContainer">
+                <input type="number" id="eventDay" pattern="/^(0[1-9]|[12]\d|3[01])$/">
+                <select id="eventMonth" name="eventMonth">
+                    <option selected> Month </option>
+                    <option>12</option>
+                </select>
+                <select id="eventYear" name="eventYear">
+                    <option selected>2021</option>
+                    <option>2030</option>
+                </select>
+            </section>
+            <p id="eventDateError">Please enter a valid date!</p>
+            <label id="eventTimeLabel" for="eventTime">Event Time: <span>(Optional)</span></label>           
+            <section class="timePicker" data-time="00:00">
+                <article class="hour">
+                   <article class="hr-up"></article> 
+                        <input type="number" class="hr" id="hr" value="00">
+                   <article class="hr-down"></article> 
+                </article>
+        
+                <article class="separator">:</article>
+        
+                <article class="minute">
+                    <article class="min-up"></article> 
+                         <input type="number" class="min" id="min" value="00">
+                    <article class="min-down"></article> 
+                 </article>   
+            </section>
+            <section class="startContainer">
+                <button id="startBtn" >Start</button>
+            </section>
+        </section>
+    </section>
+    <section class="comingSoon" id="comingSoon">
+            <h2 id="eventNameDis"></h2>
+        <section class="countdown">
+            <article class="containerDay">
+                <h3 class="dayRes"></h3>
+                <h3>Day</h3>
+            </article>
+            <article class="containerHour">
+                <h3 class="hourRes"></h3>
+                <h3>Hour</h3>
+            </article>
+            <article class="containerMinute">
+                <h3 class="minuteRes"></h3>
+                <h3>Minute</h3>
+            </article>
+            <article class="containerSecond">
+                <h3 class="secondRes"></h3>
+                <h3>Second</h3>
+            </article>
+        </section>
+    </section>
+    <section>
+        <button id="editBtn">Edit</button>
+    </section>
+
+</main>
+<footer>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+    <Script src="js/main.js"></Script>
+    <Script src="js/script.js"></Script>
+
+
+      <!-- ** Don't forget to Add jQuery here ** -->
+      <script src="js/emojionearea.js"></script>
+      <script src="js/emojionearea.min.js"></script>
+
+</body>
+</html>

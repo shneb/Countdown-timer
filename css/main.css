@@ -1,0 +1,200 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+}
+h2{
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 3rem;
+}
+.comingSoon, #eventForm{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.dayRes, .hourRes, .minuteRes, .secondRes{
+    color: rgba(0, 0, 0, 0.822);
+    font-size: 3rem;
+    margin: 0 60px;
+    background-color: rgba(255, 255, 255, 0.911);
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dateContainer, .timeContainer, .startContainer{
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-evenly;
+    
+}
+ #eventYear, #eventMonth, #eventDay, #eventTime, #startBtn{
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 2px;
+    width: 31%;
+    height: 25px;
+    background-color:rgba(255, 255, 255, 0.911);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(10px);
+}
+#eventFormContainer {
+    background-color:rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    padding: 50px;
+    border-radius: 5px;
+    
+}
+#startBtn{
+    width: 300px;
+    height: 50px;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+#eventDay{
+    height: 21px;
+    cursor:text;
+}
+
+/* time picker */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+.timePicker{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+
+    width: 100%;
+    max-width:100px;
+
+    margin: 10px auto;
+    padding: 15px 5px;
+
+    background-color: #f3f3f3ec;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+
+    color: #53565A;
+    font-size: 10px;
+    font-weight: 700;
+    user-select: none;
+}
+.timePicker .hour,
+.timePicker .minute {
+    position: relative;
+    min-width: 20px;
+    text-align: left;
+}
+
+.timePicker .hour .hr,
+.timePicker .minute .min{
+    background: none;
+    font-size: 20px;
+    appearance: none;
+    border:none;
+    outline: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+}
+.timePicker .hour .hr-up,
+.timePicker .hour .hr-down,
+.timePicker .minute .min-up,
+.timePicker .minute .min-down{
+    position:inherit;
+    left: 50%;
+    transform: translateX(-50%);
+    width:1px;
+    height: 1px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    cursor: pointer;
+}
+
+.timePicker .hour .hr-up,
+.timePicker .minute .min-up{
+    top: -10px;
+    border-bottom: 10px solid #aaa;
+}
+.timePicker .hour .hr-down,
+.timePicker .minute .min-down{
+    bottom: -10px;
+    border-top: 10px solid #aaa;
+}
+
+.timePicker .hour .hr-up:hover,
+.timePicker .hour .hr-down:hover,
+.timePicker .minute .min-up:hover,
+.timePicker .minute .min-down:hover{
+    border-bottom-color:#53565A;
+    border-top-color: #53565A;
+}
+#eventTimeLabel span{
+    font-size: 12px;
+    color: rgba(206, 206, 206, 0.836)
+}
+#eventNameError, #eventDateError{
+    display: none;
+    font-size: 15px;
+    background-color: rgba(255, 137, 27, 0.795);
+    width:fit-content;
+    border-radius: 2px;
+    padding: 3px 5px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.goodDayContainer{
+    order: 2;
+    flex: 1 1 83%;
+    margin: 0 auto;
+}
+.place{
+    font-size: 20px;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    order: 1;
+    flex:0 0 11%;
+    margin: 20px;height: fit-content;
+}
+#goodDay{
+    margin-left: 525px; 
+    font-size: 60px; 
+}
+#goodDay span{
+    font-weight: 300;
+}
+#eventNameClone{
+    display: none;
+}
+#editBtn{
+    
+}
