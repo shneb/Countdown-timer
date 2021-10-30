@@ -25,9 +25,6 @@ window.addEventListener("load", () => {
 	}
 });
 
-dateInput = eventMonth.value +" "+ eventDay.value + " " + "," +eventYear.value + " " + eventHr.value + ":" + eventMin.value + ":00";
-
-
 // declare functions
 dateGenerator();
 goodSynced();
@@ -40,9 +37,11 @@ document.getElementById("editBtn").addEventListener("click", defaultSettings);
 function submit(){
 	
 	if(dateCheck() == true && nameCheck() == true ){
+		dateInput = eventMonth.value +" "+ eventDay.value + " " + "," +eventYear.value + " " + eventHr.value + ":" + eventMin.value + ":00";
 		countdownDisplay();
 		saveSession();
 		eventNameDis.innerHTML = eventName.value;
+		
 	}else if(dateCheck() == false && nameCheck() == false){
 		document.getElementById("eventNameError").style.display = "block";
 		document.getElementById("eventDateError").style.display = "block";
@@ -84,7 +83,7 @@ function countdown () {
     hourOutPut.innerHTML = textHour;
     minuteOutPut.innerHTML = textMinute;
     secondOutPut.innerHTML = textSecond;
-}
+} 
 
 function nameCheck(){
 	if(eventName.value == ""){
