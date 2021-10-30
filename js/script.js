@@ -33,6 +33,25 @@ goodSynced();
 document.getElementById("startBtn").addEventListener("click", submit);
 document.getElementById("editBtn").addEventListener("click", defaultSettings);
 
+const start = () => {
+	setTimeout(function() {
+		confetti.start()
+	}, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+};
+
+//  for stopping the confetti 
+
+const stop = () => {
+	setTimeout(function() {
+		confetti.stop()
+	}, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+};
+
+
+function timeEnd(){
+
+}
+
 
 function submit(){
 	
@@ -52,7 +71,15 @@ function submit(){
 	}
 }
 
+
 function countdownDisplay(){
+	if(count <= now){
+		start();
+		stop();
+	}else{
+
+	}
+	
 	setInterval(countdown, 1000);
 	document.getElementById("eventForm").style.display = "none";
 	document.getElementById("comingSoon").style.display = "";
