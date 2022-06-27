@@ -185,7 +185,6 @@ function goodSynced(){
 		document.getElementById("goodDay").innerHTML += " evening!";
 	}else{
 		document.getElementById("goodDay").innerHTML += " Night!";
-
 	}
 }
 // this function is to make sure the months are 2 digits
